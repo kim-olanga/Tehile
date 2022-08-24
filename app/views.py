@@ -9,3 +9,6 @@ def about(request):
 
 def departments(request):
     return render(request, 'departments.html')
+
+def gallery(request):
+    return render(request, 'gallery.html')

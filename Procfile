@@ -1,0 +1,1 @@
+web: gunicorn Tehile.wsgi --log-file -

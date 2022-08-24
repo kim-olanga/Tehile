@@ -16,6 +16,7 @@
 - Bootstrap
 - CSS
 - HTML
+- Javascript
 
 # Author.
 - Kimberly Eve Olanga

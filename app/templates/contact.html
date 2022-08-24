@@ -1,6 +1,72 @@
 {% extends 'base.html'%}
 
+
 {% block content%}
 {{block.super}}
 
+<section class="container">
+  <div class="contactInfo">
+      <h2>CONTACT US</h2>
+      <p>Please reach out to us if you have a question, feedback or comment.</p>
+      <div class="container">
+          <div class="contactInfo">
+              <div class="box">
+                  <div class="text">
+                      <h3>Address</h3>
+                      <p>3772 Utawala, <br>Nairobi,Kenya, <br>00100</p>
+                  </div>
+              </div>
+              <div class="box">
+                  <div class="text">
+                      <h3>Phone</h3>
+                      <p>0758670456</p>
+                  </div>
+              </div>
+              <div class="box">
+                  <div class="text">
+                      <h3>Email</h3>
+                      <p>kimolanga123@gmail.com</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="contactForm">
+      <form id="submit">
+          <h2>Send Message</h2>
+          <div class="inputBox">
+              <input type="text" name="" required="required" id="name">
+              <span>Full Name</span>
+          </div>
+          <div class="inputBox">
+              <input type="text" name="" required="required" id="email">
+              <span>Email</span>
+          </div>
+          <div class="inputBox">
+              <textarea required="required" id="message"></textarea>
+              <span>Message</span>
+          </div>
+          <div class="inputBox">
+              <input type="submit" name="" value="send" id="submit">
+              <p id="output"></p>
+          </div>
+      </form>
+  </div>
+</section>
+
+<script>
+  $(function(){
+    $("#submit").submit(function(event){
+        event.preventDefault()
+        var message = `Thank you for the feedback`
+        $("#output").append(message)
+    });
+});
+   // AUTOMATIC YEAR UPDATE 
+   let date = new Date().getFullYear();
+   let dateTag = document.getElementById("year");
+   dateTag.innerHTML = `Copyright © ${date}`;
+
+</script>
 {% endblock %}
+

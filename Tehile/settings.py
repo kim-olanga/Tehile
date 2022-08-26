@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import os
+import os,cloudinary, cloudinary.uploader, cloudinary.api
 import dj_database_url
 import django_heroku
 from decouple import config,Csv
@@ -42,8 +42,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
-    'bootstrap4'
+    'bootstrap4',
+    'cloudinary'
 ]
+
+#Setting up cloudinary
+cloudinary.config(
+    cloud_name = 'school-for-schoolis',
+    api_key = '241414696281575',
+    api_secret = 'qIB93Jm8VZsvcypU_AeIBQewJpQ',
+)
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

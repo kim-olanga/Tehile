@@ -1,7 +1,7 @@
-from django.shortcuts import render,redirect
-from django.http import Http404
-from .models import Pictures
-from django.core.exceptions import ObjectDoesNotExist
+from django.shortcuts import render
+# from django.http import Http404
+# from .models import Pictures
+# from django.core.exceptions import ObjectDoesNotExist
 
 
 # Create your views here.
@@ -14,12 +14,12 @@ def about(request):
 def departments(request):
     return render(request, 'departments.html')
 
-def gallery(request,pictures_id):
-    try:
-        pictures = Pictures.objects.get(id = pictures_id)
-    except ObjectDoesNotExist:
-        raise Http404()
-    return render(request, 'gallery.html',{"pictures":pictures})
+def gallery(request):
+    # try:
+    #     pictures = Pictures.objects.get(id = pictures_id)
+    # except ObjectDoesNotExist:
+    #     raise Http404()
+    return render(request, 'gallery.html')
 
 def contact(request):
     return render(request, 'contact.html')

@@ -2,49 +2,151 @@
 
 {% block content%}
 {{block.super}}
+<div>
+  <h1 class="text-center">Welcome to <strong>our world !</strong></h1>
+  <p class="text-center main">Where all our photos are kept in check</p>
+</div>
 
-<div class="container">
-  <div>
-      <h1 class="text-center">Welcome to <strong>Say-Cheese !</strong></h1>
-      <p class="text-center main">Where all your favorite photos are kept in check</p>
+<div class="row">
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-17 at 12.17.04 PM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#Tehile Gems</h5>
+      <p class="card-text">These are the ladies of the team..</p>
+    </div>
   </div>
-  <div class="row pt-4">
-      {% for photo in Picture%}
-      <div class = "col-md-4" data-toggle ="modal" data-target="#showPictureModal{{photo.id}}">
-          <img src="{{photo.image.url}}" alt="" class="img-responsive">
-      </div>
-
-      <!-- MODAL -->
-      <div class="modal fade" id="showPictureModal{{photo.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h2 class="modal-title text-center" id="modalPictureTitle">{{photo.name}}</h2>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <!-- MODAL BODY -->
-                  <div class="modal-body">
-                      <img src="{{photo.image.url}}" alt="{{photo.name}}" class="img-fluid img-thumbnail" height="200px" width="200px">
-                      <p class="text-center mt-3"><strong>About this photo:&nbsp;</strong>{{ photo.description }}</p>
-                      <hr>
-                      <div class="row">
-                          <div class="col-sm-4">
-                              <p><strong>Category:&nbsp;</strong>{{photo.category}}</p>
-                          </div>
-                          <div class="col-sm-4">
-                              <p><strong>Location:&nbsp;</strong>{{photo.location}}</p>
-                          </div>
-                          <div class="col-sm-4">
-                              <p><strong>Date Taken:&nbsp;</strong>{{photo.post_date}}</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      {% endfor %}
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-17 at 12.17.05 PM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#Men Of Valour</h5>
+      <p class="card-text">These are the men of the team..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-22 at 8.43.27 AM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#Ministration</h5>
+      <p class="card-text">Young people let your heart's beat for Christ!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-22 at 10.51.30 AM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#Ministration</h5>
+      <p class="card-text">Our fashion and design ministry is very vibrant..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-22 at 10.51.34 AM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#The Team</h5>
+      <p class="card-text">These are some of the team members..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/IMG_8600.JPG" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#This Is Us!!</h5>
+      <p class="card-text">Creation awaits the manifestiation of Sons!!!We are the SONS!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-26 at 3.18.20 PM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#Mission!!</h5>
+      <p class="card-text">When young people are changed by the Word of God,our tomorrow is secured...</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-26 at 3.18.31 PM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#Instruments!!</h5>
+      <p class="card-text">We have instrumentalists who receive chords directly from HEAVEN!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-26 at 3.18.30 PM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#Worship!!</h5>
+      <p class="card-text">Child of God manifest!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-26 at 3.18.44 PM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#This Is Us!!</h5>
+      <p class="card-text">Young people there is joy in God!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-26 at 3.18.45 PM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#This Is Us!!</h5>
+      <p class="card-text">We live for God!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-26 at 3.18.47 PM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#This Is Us!!</h5>
+      <p class="card-text">There is beauty in God!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-26 at 3.18.48 PM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#Fatherhood and Sonship!!</h5>
+      <p class="card-text">This is our Father,Rev Emmanuel Kokonyo. Great man of God!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-26 at 3.18.50 PM (1).jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#This Is Us!!</h5>
+      <p class="card-text">Chrismass 2021.. Enjoy every year in Worship and praise!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-26 at 3.18.51 PM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#Worship Experiences!!</h5>
+      <p class="card-text">We are known to great men and women of God. <br> This was in the Yaddah Worship Experience. <br> We met the a great man who serves the great God,Minister Dr.Ipyanya !!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-26 at 3.18.52 PM (1).jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#This Is Us!!</h5>
+      <p class="card-text">Fullness of joy!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-26 at 3.18.54 PM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#This Is Us!!</h5>
+      <p class="card-text">We celebrate each other,because that is what brethren do!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/WhatsApp Image 2022-08-26 at 4.16.34 PM.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#This Is Us!!</h5>
+      <p class="card-text">August 2021. <br>Zamar Worship Experience!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/IMG_8602.JPG" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#This Is Us!!</h5>
+      <p class="card-text">😂 😂 😂!!!..</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;min-height: 20rem; margin: 30px;padding: 25px;">
+    <img src="/static/images/IMG_8602.JPG" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">#This Is Us!!</h5>
+      <p class="card-text">Kila msee na style yake!!!..</p>
+    </div>
   </div>
 </div>
 

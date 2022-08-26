@@ -1,4 +1,3 @@
-from unicodedata import name
 from django.urls import path
 from . import views
 from django.conf.urls.static import static
@@ -11,11 +10,6 @@ urlpatterns = [
   path('gallery/',views.gallery, name='gallery'),
   path('contact/',views.contact, name='contact'),
 ]
-
-
-
-
-
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import Http404
-# from .models import Pictures
+from .models import Pictures
 from django.core.exceptions import ObjectDoesNotExist
 
 
@@ -14,7 +14,7 @@ def about(request):
 def departments(request):
     return render(request, 'departments.html')
 
-def gallery(request):
+def gallery(request,pictures_id):
     try:
         pictures = Pictures.objects.get(id = pictures_id)
     except ObjectDoesNotExist:

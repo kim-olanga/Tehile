@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import Http404
-from .models import Pictures
+# from .models import Pictures
 from django.core.exceptions import ObjectDoesNotExist
 
 

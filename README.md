@@ -1,5 +1,5 @@
 # Project Name.
-- Tehile.
+- Tehille.
 
 # Description.
 - This project is an upcoming organisation's website. This website will enable the public to come to the know of what this organisation is all about, where it can be located and who is welcomed to this organisation.

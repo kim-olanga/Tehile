@@ -1,3 +1,4 @@
 .env
 virtual/
-/static
+/static/
+/staticfiles/
